@@ -61,7 +61,7 @@ function startLuckDraw() {
     var randomPerson = getRandomArrayElements(remainPerson, luckyDrawNum);
     var tempHtml = "";
     $.each(randomPerson, function (i, person) {       
-        tempHtml += "<span><img src='css/img/" + person + ".png' width='200px' style='box-shadow:2px 2px 10px gray;'></span>";
+        tempHtml += "<span><img src='css/img/icon" + person + ".png' width='200px' style='box-shadow:2px 2px 10px gray;'></span>";
     });
     $("#result>div").html(tempHtml);
 
@@ -72,7 +72,7 @@ function startLuckDraw() {
 //顯示正面
 function move() {    
         $("#result").fadeOut("normal", function () {
-            $("#result>div").html("<img src='css/img/00.png' width='200px' style='box-shadow:2px 2px 10px gray;'>");
+            $("#result>div").html("<img src='css/img/icon/00.png' width='200px' style='box-shadow:2px 2px 10px gray;'>");
             $("#result").fadeIn();
         });    
         $("#result").fadeOut(2000, "linear");
@@ -91,6 +91,7 @@ function iconAnimation() {
             $($icon[4]).removeClass().stop().addClass("animated "+ arrAnimatoin1[j]);//輸入框設定動畫方式
         } else {
             $($icon[i]).removeClass().stop().addClass("animated " + arrAnimatoin[j]);//輸入框設定動畫方式
+
         }
     }, interTime);
 
