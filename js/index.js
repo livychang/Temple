@@ -61,7 +61,7 @@ function startLuckDraw() {
     var randomPerson = getRandomArrayElements(remainPerson, luckyDrawNum);
     var tempHtml = "";
     $.each(randomPerson, function (i, person) {       
-        tempHtml += "<span><img src='css/img/icon" + person + ".png' width='200px' style='box-shadow:2px 2px 10px gray;'></span>";
+        tempHtml += "<span><img src='css/img/icon/" + person + ".png' width='200px' style='box-shadow:2px 2px 10px gray;'></span>";
     });
     $("#result>div").html(tempHtml);
 
@@ -96,4 +96,5 @@ function iconAnimation() {
     }, interTime);
 
 }
+
 
